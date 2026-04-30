@@ -220,7 +220,7 @@ h3 {
 
 .check-list li::before {
     color: var(--red-700);
-    content: "✓";
+    content: ">";
     font-weight: 700;
     left: 0;
     position: absolute;
