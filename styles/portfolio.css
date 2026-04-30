@@ -1,37 +1,73 @@
-.our-portfolio-div-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.portfolio-section {
+    background: var(--white);
 }
 
-.our-portfolio-text {
-    font-family: Playfair Display;
-    font-size: 65px;
-    font-weight: bold;
-    color: #0E3A27;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.portfolio-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1.15fr 0.85fr 0.85fr;
+    margin-top: 42px;
 }
 
-.extra-text {
-    color: #0E3A27;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 0;
+.portfolio-card {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-height: 430px;
+    overflow: hidden;
+    position: relative;
 }
 
-.christmas-light-homes {
-    width: 300px;
-    height: 400px;
-    border-radius: 10px;
+.portfolio-card.featured {
+    min-height: 540px;
 }
 
-.christmas-light-homes-flex-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 50px;
+.portfolio-card img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.portfolio-card::after {
+    background: linear-gradient(180deg, rgba(8, 38, 26, 0) 42%, rgba(8, 38, 26, 0.84) 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.portfolio-card figcaption {
+    bottom: 0;
+    color: var(--white);
+    font-weight: 700;
+    left: 0;
+    padding: 24px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.gallery-page-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-page-grid .portfolio-card.featured {
+    grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-page-grid,
+    .gallery-page-grid .portfolio-card.featured {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card,
+    .portfolio-card.featured {
+        min-height: 360px;
+    }
 }

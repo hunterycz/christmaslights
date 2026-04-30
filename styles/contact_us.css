@@ -1,100 +1,135 @@
-.contact-us-div-main {
-    background-color: #0e3a27;
+.contact-section {
+    background: var(--green-900);
+    color: var(--white);
+    padding: 96px max(24px, calc((100vw - 1180px) / 2));
 }
 
-.contact-us-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.contact-content {
+    display: grid;
+    gap: 52px;
+    grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1fr);
 }
 
-.contact-us-text {
-    font-family: Playfair Display;
-    font-size: 65px;
-    font-weight: bold;
-    margin-bottom: 0;
+.contact-content .eyebrow {
+    color: var(--gold-400);
 }
 
-.contact-us-extra-text {
-    font-size: 22px;
+.contact-content p {
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 1.08rem;
+    margin-top: 18px;
 }
 
-input {
-    font-family: Roboto;
-    color: #000000;
-    font-size: 16px;
-    background-color: rgb(244, 244, 245);
-    padding: 20px 100px 20px 15px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    width: 300px;
+.phone-link {
+    color: var(--white);
+    display: inline-flex;
+    font-weight: 700;
+    margin-top: 26px;
+    text-decoration: underline;
+    text-decoration-color: var(--gold-400);
+    text-underline-offset: 6px;
 }
 
-input::placeholder {
-    font-family: Roboto;
-    color: #71717A;
-    font-size: 16px;
+.contact-form {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--ink);
+    display: grid;
+    gap: 18px;
+    padding: 28px;
+}
+
+.form-row {
+    display: grid;
+    gap: 8px;
+}
+
+.form-row.two-column {
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 label {
-    color: rgb(244, 244, 245);
-    margin-bottom: 50px;
+    color: var(--green-900);
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
-.first-half-bottom-main-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 100px;
-    margin-top: 20px;
+input,
+select,
+textarea {
+    background: #fbfaf7;
+    border: 1px solid rgba(14, 58, 39, 0.18);
+    border-radius: var(--radius);
+    color: var(--ink);
+    min-height: 52px;
+    padding: 13px 14px;
+    width: 100%;
 }
 
-.message-div-main {
-    margin-left: 285px;
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--gold-400);
+    box-shadow: 0 0 0 3px rgba(216, 168, 75, 0.22);
+    outline: none;
 }
 
-.message-bar {
-    padding-right: 0;
-    padding-bottom: 200px;
-    width: 919px;
+input::placeholder,
+textarea::placeholder {
+    color: #7b847e;
 }
 
 textarea {
-    font-family: Roboto;
-    color: #000000;
-    font-size: 16px;
-    background-color: rgb(244, 244, 245);
-    padding: 20px 100px 20px 15px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    width: 300px;
+    min-height: 146px;
+    resize: vertical;
 }
 
-textarea::placeholder {
-    font-family: Roboto;
-    color: #71717A;
-    font-size: 16px;
+.form-button {
+    border: 0;
+    justify-self: start;
 }
 
-.send-button-inner-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contact-page-section {
+    background: var(--cream-100);
 }
 
-.send-button {
-    background-color: rgb(189, 37, 40);
-    color: rgb(244, 244, 245);
-    font-family: Roboto;
-    font-size: 20px;
-    border: none;
-    padding: 20px 100px 20px 100px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-    cursor: pointer;
+.contact-page-section .contact-content {
+    align-items: start;
+}
+
+.quote-panel {
+    background: var(--green-900);
+    border-radius: var(--radius);
+    color: var(--white);
+    padding: 34px;
+}
+
+.quote-panel h2 {
+    font-size: 3rem;
+}
+
+@media (max-width: 900px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .contact-section {
+        padding: 72px 20px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .form-row.two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .form-button {
+        justify-self: stretch;
+    }
 }

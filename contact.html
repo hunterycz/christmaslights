@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contact Evergreen Lighting Co. for a free Christmas light installation quote.">
+        <meta property="og:title" content="Contact | Evergreen Lighting Co.">
+        <meta property="og:description" content="Request a holiday lighting quote for your home or business.">
+        <meta property="og:type" content="website">
+        <title>Contact | Evergreen Lighting Co.</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/about_us.css">
+        <link rel="stylesheet" href="styles/portfolio.css">
+        <link rel="stylesheet" href="styles/contact_us.css">
+        <link rel="icon" href="icons/evergreen_tree_icon.png" type="image/png">
+    </head>
+    <body>
+        <header class="site-header">
+            <nav class="nav" aria-label="Main navigation">
+                <a class="brand" href="index.html" aria-label="Evergreen Lighting Co. home">
+                    <img src="icons/evergreen_tree_icon.png" alt="" class="brand-icon" width="34" height="34">
+                    <span>Evergreen Lighting Co.</span>
+                </a>
+                <div class="nav-links">
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="index.html#process">Process</a>
+                    <a href="contact.html" aria-current="page">Contact</a>
+                </div>
+                <a class="nav-cta" href="contact.html">Get a Quote</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="subpage-hero contact-page-hero">
+                <div>
+                    <p class="eyebrow">Free quote</p>
+                    <h1>Tell us what you want your holidays to look like.</h1>
+                    <p>Send your property details, preferred timing, and the kind of lighting style you have in mind. We will follow up with next steps.</p>
+                </div>
+            </section>
+
+            <section class="contact-section contact-page-section" id="contact" aria-labelledby="contact-title">
+                <div class="contact-content">
+                    <aside class="quote-panel">
+                        <p class="eyebrow">Contact us</p>
+                        <h2 id="contact-title">Request your quote.</h2>
+                        <p>We recommend reaching out early in the season so installation can be scheduled before peak holiday demand.</p>
+                        <a class="phone-link" href="tel:+13854376065">Call 385-437-6065</a>
+                    </aside>
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-row">
+                            <label for="full-name">Full name</label>
+                            <input id="full-name" name="full-name" type="text" placeholder="Your name" autocomplete="name" required>
+                        </div>
+                        <div class="form-row two-column">
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                            </div>
+                            <div>
+                                <label for="phone">Phone</label>
+                                <input id="phone" name="phone" type="tel" placeholder="385-437-6065" autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="form-row two-column">
+                            <div>
+                                <label for="street">Street address</label>
+                                <input id="street" name="street" type="text" placeholder="Street address" autocomplete="street-address">
+                            </div>
+                            <div>
+                                <label for="zip-code">Zip code</label>
+                                <input id="zip-code" name="zip-code" type="text" placeholder="12345" autocomplete="postal-code" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="property-type">Property type</label>
+                            <select id="property-type" name="property-type">
+                                <option value="">Select an option</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="hoa">HOA or neighborhood</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Project details</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your Christmas lighting needs, timing, property size, and any inspiration you have." required></textarea>
+                        </div>
+                        <button class="button button-primary form-button" type="submit">Send request</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Evergreen Lighting Co.</p>
+            <p>Christmas light design, installation, maintenance, removal, and storage.</p>
+        </footer>
+    </body>
+</html>
